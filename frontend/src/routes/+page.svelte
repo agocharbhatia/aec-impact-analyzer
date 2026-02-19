@@ -70,7 +70,7 @@
   });
 </script>
 
-<section class="grid gap-6 lg:grid-cols-[1.1fr,0.9fr]">
+<section class="grid gap-6 lg:min-h-[calc(100dvh-4rem)] lg:grid-cols-[1.1fr,0.9fr] lg:content-center">
   <div class="panel">
     <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Structured QA/QC Demo</p>
     <h1 class="mt-2 text-3xl font-semibold text-ink">Cross Discipline Impact Analyzer</h1>
