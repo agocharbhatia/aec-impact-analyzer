@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structured.ai/schemas/analyze-request.schema.json",
+  "title": "AnalyzeRequest",
+  "type": "object",
+  "required": ["changeEvent"],
+  "properties": {
+    "datasetId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "datasetJson": {
+      "type": "object",
+      "required": ["projectId", "elements"],
+      "properties": {
+        "projectId": { "type": "string" },
+        "elements": {
+          "type": "array",
+          "items": {
+            "$ref": "./element.schema.json"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "changeEvent": {
+      "$ref": "./change-event.schema.json"
+    }
+  },
+  "oneOf": [
+    {
+      "required": ["datasetId", "changeEvent"],
+      "not": { "required": ["datasetJson"] }
+    },
+    {
+      "required": ["datasetJson", "changeEvent"],
+      "not": { "required": ["datasetId"] }
+    }
+  ],
+  "additionalProperties": false
+}

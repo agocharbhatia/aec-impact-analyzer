@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structured.ai/schemas/analyze-result.schema.json",
+  "title": "AnalyzeResult",
+  "type": "object",
+  "required": ["impactedElements", "summary"],
+  "properties": {
+    "impactedElements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "discipline", "category", "severity", "reasons"],
+        "properties": {
+          "id": { "type": "string" },
+          "discipline": {
+            "type": "string",
+            "enum": ["ARCH", "MECH", "ELEC", "PLUMB"]
+          },
+          "category": { "type": "string" },
+          "severity": { "type": "number", "minimum": 0, "maximum": 1 },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["ruleId", "description", "pathElementIds"],
+              "properties": {
+                "ruleId": {
+                  "type": "string",
+                  "enum": ["intersection", "clearance", "connector"]
+                },
+                "description": { "type": "string" },
+                "pathElementIds": {
+                  "type": "array",
+                  "items": { "type": "string" },
+                  "minItems": 2
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["totalImpacted", "byDiscipline", "maxSeverity"],
+      "properties": {
+        "totalImpacted": { "type": "integer", "minimum": 0 },
+        "byDiscipline": {
+          "type": "object",
+          "required": ["ARCH", "MECH", "ELEC", "PLUMB"],
+          "properties": {
+            "ARCH": { "type": "integer", "minimum": 0 },
+            "MECH": { "type": "integer", "minimum": 0 },
+            "ELEC": { "type": "integer", "minimum": 0 },
+            "PLUMB": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "maxSeverity": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

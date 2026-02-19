@@ -1,0 +1,34 @@
+{
+  "datasetId": "office_core_v1",
+  "projectId": "office-core-l1",
+  "name": "Office Core L1",
+  "elements": [
+    {"id": "A-WALL-01", "discipline": "ARCH", "category": "Wall", "level": "L1", "bbox": {"x1": 1.0, "y1": 2.0, "x2": 15.0, "y2": 2.35}},
+    {"id": "A-WALL-02", "discipline": "ARCH", "category": "Wall", "level": "L1", "bbox": {"x1": 1.0, "y1": 8.0, "x2": 15.0, "y2": 8.35}},
+    {"id": "A-WALL-03", "discipline": "ARCH", "category": "Wall", "level": "L1", "bbox": {"x1": 1.0, "y1": 2.0, "x2": 1.35, "y2": 8.0}},
+    {"id": "A-WALL-04", "discipline": "ARCH", "category": "Wall", "level": "L1", "bbox": {"x1": 15.0, "y1": 2.0, "x2": 15.35, "y2": 8.0}},
+    {"id": "A-DOOR-01", "discipline": "ARCH", "category": "Door", "level": "L1", "bbox": {"x1": 7.2, "y1": 2.0, "x2": 8.1, "y2": 2.35}},
+    {"id": "A-COLUMN-01", "discipline": "ARCH", "category": "Column", "level": "L1", "bbox": {"x1": 4.0, "y1": 4.0, "x2": 4.6, "y2": 4.6}},
+    {"id": "A-COLUMN-02", "discipline": "ARCH", "category": "Column", "level": "L1", "bbox": {"x1": 12.0, "y1": 4.0, "x2": 12.6, "y2": 4.6}},
+    {"id": "A-RISER-01", "discipline": "ARCH", "category": "Riser", "level": "L1", "bbox": {"x1": 10.4, "y1": 6.4, "x2": 11.4, "y2": 7.4}},
+
+    {"id": "M-DUCT-01", "discipline": "MECH", "category": "Duct", "level": "L1", "bbox": {"x1": 6.8, "y1": 2.1, "x2": 9.8, "y2": 2.55}, "connectors": ["C-AHU-01", "C-ZONE-A"]},
+    {"id": "M-DUCT-02", "discipline": "MECH", "category": "Duct", "level": "L1", "bbox": {"x1": 10.5, "y1": 8.1, "x2": 13.8, "y2": 8.55}, "connectors": ["C-AHU-01", "C-ZONE-B"]},
+    {"id": "M-AHU-01", "discipline": "MECH", "category": "Equipment", "level": "L1", "bbox": {"x1": 10.2, "y1": 4.8, "x2": 11.8, "y2": 6.1}, "connectors": ["C-AHU-01", "C-POWER-01", "C-DRAIN-01"], "params": {"clearance": 1.2}},
+    {"id": "M-VAV-01", "discipline": "MECH", "category": "Equipment", "level": "L1", "bbox": {"x1": 5.0, "y1": 5.2, "x2": 5.8, "y2": 5.9}, "connectors": ["C-ZONE-A", "C-POWER-02"], "params": {"clearance": 0.7}},
+    {"id": "M-VAV-02", "discipline": "MECH", "category": "Equipment", "level": "L1", "bbox": {"x1": 13.1, "y1": 5.2, "x2": 13.9, "y2": 5.9}, "connectors": ["C-ZONE-B", "C-POWER-03"], "params": {"clearance": 0.7}},
+    {"id": "M-PUMP-01", "discipline": "MECH", "category": "Equipment", "level": "L1", "bbox": {"x1": 2.6, "y1": 5.0, "x2": 3.3, "y2": 5.8}, "connectors": ["C-HWS-01", "C-POWER-04"], "params": {"clearance": 0.8}},
+
+    {"id": "E-TRAY-01", "discipline": "ELEC", "category": "CableTray", "level": "L1", "bbox": {"x1": 5.8, "y1": 2.0, "x2": 10.4, "y2": 2.28}, "connectors": ["C-POWER-01", "C-POWER-02", "C-POWER-03"]},
+    {"id": "E-TRAY-02", "discipline": "ELEC", "category": "CableTray", "level": "L1", "bbox": {"x1": 2.2, "y1": 5.5, "x2": 14.0, "y2": 5.8}, "connectors": ["C-POWER-04"]},
+    {"id": "E-PANEL-01", "discipline": "ELEC", "category": "Panel", "level": "L1", "bbox": {"x1": 9.3, "y1": 4.1, "x2": 10.1, "y2": 4.9}, "connectors": ["C-POWER-01"], "params": {"clearance": 0.9}},
+    {"id": "E-PANEL-02", "discipline": "ELEC", "category": "Panel", "level": "L1", "bbox": {"x1": 2.0, "y1": 4.0, "x2": 2.8, "y2": 4.8}, "connectors": ["C-POWER-04"], "params": {"clearance": 0.9}},
+    {"id": "E-CONDUIT-01", "discipline": "ELEC", "category": "Conduit", "level": "L1", "bbox": {"x1": 11.0, "y1": 5.7, "x2": 12.7, "y2": 6.0}, "connectors": ["C-POWER-03"]},
+
+    {"id": "P-PIPE-01", "discipline": "PLUMB", "category": "Pipe", "level": "L1", "bbox": {"x1": 7.0, "y1": 2.05, "x2": 9.4, "y2": 2.22}, "connectors": ["C-DRAIN-01", "C-HWS-01"]},
+    {"id": "P-PIPE-02", "discipline": "PLUMB", "category": "Pipe", "level": "L1", "bbox": {"x1": 2.9, "y1": 5.1, "x2": 10.0, "y2": 5.35}, "connectors": ["C-HWS-01"]},
+    {"id": "P-FIXTURE-01", "discipline": "PLUMB", "category": "Fixture", "level": "L1", "bbox": {"x1": 14.0, "y1": 3.0, "x2": 14.6, "y2": 3.6}, "connectors": ["C-DRAIN-02"]},
+    {"id": "P-DRAIN-01", "discipline": "PLUMB", "category": "Drain", "level": "L1", "bbox": {"x1": 10.7, "y1": 6.2, "x2": 11.2, "y2": 6.7}, "connectors": ["C-DRAIN-01"]},
+    {"id": "P-VALVE-01", "discipline": "PLUMB", "category": "Valve", "level": "L1", "bbox": {"x1": 3.5, "y1": 5.0, "x2": 3.9, "y2": 5.4}, "connectors": ["C-HWS-01"]}
+  ]
+}

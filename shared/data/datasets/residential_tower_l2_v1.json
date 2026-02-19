@@ -1,0 +1,33 @@
+{
+  "datasetId": "residential_tower_l2_v1",
+  "projectId": "residential-tower-l2",
+  "name": "Residential Tower L2",
+  "elements": [
+    {"id": "T-WALL-01", "discipline": "ARCH", "category": "Wall", "level": "L2", "bbox": {"x1": 1.0, "y1": 2.0, "x2": 14.0, "y2": 2.35}},
+    {"id": "T-WALL-02", "discipline": "ARCH", "category": "Wall", "level": "L2", "bbox": {"x1": 1.0, "y1": 9.0, "x2": 14.0, "y2": 9.35}},
+    {"id": "T-WALL-03", "discipline": "ARCH", "category": "Wall", "level": "L2", "bbox": {"x1": 1.0, "y1": 2.0, "x2": 1.35, "y2": 9.0}},
+    {"id": "T-WALL-04", "discipline": "ARCH", "category": "Wall", "level": "L2", "bbox": {"x1": 14.0, "y1": 2.0, "x2": 14.35, "y2": 9.0}},
+    {"id": "T-WALL-05", "discipline": "ARCH", "category": "Wall", "level": "L2", "bbox": {"x1": 7.0, "y1": 2.0, "x2": 7.35, "y2": 9.0}},
+    {"id": "T-DOOR-01", "discipline": "ARCH", "category": "Door", "level": "L2", "bbox": {"x1": 6.3, "y1": 2.0, "x2": 7.1, "y2": 2.35}},
+    {"id": "T-COLUMN-01", "discipline": "ARCH", "category": "Column", "level": "L2", "bbox": {"x1": 3.8, "y1": 4.0, "x2": 4.4, "y2": 4.6}},
+    {"id": "T-COLUMN-02", "discipline": "ARCH", "category": "Column", "level": "L2", "bbox": {"x1": 11.1, "y1": 4.0, "x2": 11.7, "y2": 4.6}},
+    {"id": "T-RISER-01", "discipline": "ARCH", "category": "Riser", "level": "L2", "bbox": {"x1": 12.0, "y1": 6.8, "x2": 12.8, "y2": 7.6}},
+
+    {"id": "T-FCU-01", "discipline": "MECH", "category": "Equipment", "level": "L2", "bbox": {"x1": 9.2, "y1": 5.0, "x2": 10.2, "y2": 5.8}, "connectors": ["TW-AIR-01", "TW-POWER-01", "TW-DRAIN-01"], "params": {"clearance": 1.0}},
+    {"id": "T-DUCT-01", "discipline": "MECH", "category": "Duct", "level": "L2", "bbox": {"x1": 5.2, "y1": 2.0, "x2": 8.9, "y2": 2.35}, "connectors": ["TW-AIR-01", "TW-ZONE-A"]},
+    {"id": "T-DUCT-02", "discipline": "MECH", "category": "Duct", "level": "L2", "bbox": {"x1": 10.2, "y1": 8.9, "x2": 12.8, "y2": 9.25}, "connectors": ["TW-AIR-01", "TW-ZONE-B"]},
+    {"id": "T-FCU-02", "discipline": "MECH", "category": "Equipment", "level": "L2", "bbox": {"x1": 4.3, "y1": 5.3, "x2": 5.0, "y2": 6.0}, "connectors": ["TW-ZONE-A", "TW-POWER-02"], "params": {"clearance": 0.7}},
+    {"id": "T-FCU-03", "discipline": "MECH", "category": "Equipment", "level": "L2", "bbox": {"x1": 11.6, "y1": 5.2, "x2": 12.3, "y2": 5.9}, "connectors": ["TW-ZONE-B", "TW-POWER-03"], "params": {"clearance": 0.7}},
+
+    {"id": "T-TRAY-01", "discipline": "ELEC", "category": "CableTray", "level": "L2", "bbox": {"x1": 4.8, "y1": 2.0, "x2": 10.5, "y2": 2.25}, "connectors": ["TW-POWER-01", "TW-POWER-02", "TW-POWER-03"]},
+    {"id": "T-PANEL-01", "discipline": "ELEC", "category": "Panel", "level": "L2", "bbox": {"x1": 8.4, "y1": 4.2, "x2": 9.1, "y2": 4.9}, "connectors": ["TW-POWER-01"], "params": {"clearance": 0.8}},
+    {"id": "T-PANEL-02", "discipline": "ELEC", "category": "Panel", "level": "L2", "bbox": {"x1": 2.0, "y1": 4.0, "x2": 2.7, "y2": 4.7}, "connectors": ["TW-POWER-02"], "params": {"clearance": 0.8}},
+    {"id": "T-CONDUIT-01", "discipline": "ELEC", "category": "Conduit", "level": "L2", "bbox": {"x1": 10.7, "y1": 5.6, "x2": 12.2, "y2": 5.9}, "connectors": ["TW-POWER-03"]},
+
+    {"id": "T-PIPE-01", "discipline": "PLUMB", "category": "Pipe", "level": "L2", "bbox": {"x1": 5.9, "y1": 2.02, "x2": 8.8, "y2": 2.2}, "connectors": ["TW-DRAIN-01", "TW-HWS-01"]},
+    {"id": "T-PIPE-02", "discipline": "PLUMB", "category": "Pipe", "level": "L2", "bbox": {"x1": 3.0, "y1": 5.2, "x2": 8.0, "y2": 5.45}, "connectors": ["TW-HWS-01"]},
+    {"id": "T-DRAIN-01", "discipline": "PLUMB", "category": "Drain", "level": "L2", "bbox": {"x1": 9.6, "y1": 6.1, "x2": 10.1, "y2": 6.6}, "connectors": ["TW-DRAIN-01"]},
+    {"id": "T-VALVE-01", "discipline": "PLUMB", "category": "Valve", "level": "L2", "bbox": {"x1": 3.6, "y1": 5.1, "x2": 4.0, "y2": 5.5}, "connectors": ["TW-HWS-01"]},
+    {"id": "T-SINK-01", "discipline": "PLUMB", "category": "Fixture", "level": "L2", "bbox": {"x1": 13.0, "y1": 3.2, "x2": 13.6, "y2": 3.8}, "connectors": ["TW-DRAIN-02"]}
+  ]
+}

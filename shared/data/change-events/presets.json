@@ -1,0 +1,140 @@
+{
+  "presets": [
+    {
+      "id": "office_wall_shift_l1",
+      "datasetId": "office_core_v1",
+      "label": "Shift corridor wall (ARCH)",
+      "description": "Move A-WALL-01 upward by 0.25m to simulate architectural layout change.",
+      "changeEvent": {
+        "type": "MOVE",
+        "elementIds": ["A-WALL-01"],
+        "delta": {"dx": 0.0, "dy": 0.25},
+        "metadata": {"author": "demo", "intent": "layout-adjustment"}
+      }
+    },
+    {
+      "id": "office_ahu_relocate",
+      "datasetId": "office_core_v1",
+      "label": "Relocate AHU skid (MECH)",
+      "description": "Move M-AHU-01 to test clearance and connector impact propagation.",
+      "changeEvent": {
+        "type": "RELOCATE",
+        "elementIds": ["M-AHU-01"],
+        "delta": {"dx": -0.7, "dy": 0.4},
+        "metadata": {"author": "demo", "intent": "equipment-relocation"}
+      }
+    },
+    {
+      "id": "office_panel_resize",
+      "datasetId": "office_core_v1",
+      "label": "Resize electrical panel zone (ELEC)",
+      "description": "Resize E-PANEL-01 footprint to stress nearby clearance and connector impacts.",
+      "changeEvent": {
+        "type": "RESIZE",
+        "elementIds": ["E-PANEL-01"],
+        "newBbox": {"x1": 9.0, "y1": 3.9, "x2": 10.5, "y2": 5.3},
+        "metadata": {"author": "demo", "intent": "panel-upsize"}
+      }
+    },
+
+    {
+      "id": "clinic_rtu_resize",
+      "datasetId": "clinic_floor_v1",
+      "label": "Resize RTU footprint (MECH)",
+      "description": "Expand C-RTU-01 to trigger nearby clearance and dependency impacts.",
+      "changeEvent": {
+        "type": "RESIZE",
+        "elementIds": ["C-RTU-01"],
+        "newBbox": {"x1": 9.0, "y1": 5.6, "x2": 11.6, "y2": 7.6},
+        "metadata": {"author": "demo", "intent": "capacity-upgrade"}
+      }
+    },
+    {
+      "id": "clinic_corridor_wall_shift",
+      "datasetId": "clinic_floor_v1",
+      "label": "Shift clinic corridor wall (ARCH)",
+      "description": "Move C-WALL-01 upward to simulate late architectural coordination.",
+      "changeEvent": {
+        "type": "MOVE",
+        "elementIds": ["C-WALL-01"],
+        "delta": {"dx": 0.0, "dy": 0.2},
+        "metadata": {"author": "demo", "intent": "late-layout-update"}
+      }
+    },
+
+    {
+      "id": "mixed_chiller_relocate",
+      "datasetId": "mixed_use_lobby_v1",
+      "label": "Relocate lobby chiller (MECH)",
+      "description": "Shift M-CHILLER-01 toward circulation to expose clearance and connector impacts.",
+      "changeEvent": {
+        "type": "RELOCATE",
+        "elementIds": ["M-CHILLER-01"],
+        "delta": {"dx": -0.8, "dy": 0.45},
+        "metadata": {"author": "demo", "intent": "equipment-reposition"}
+      }
+    },
+    {
+      "id": "mixed_partition_shift",
+      "datasetId": "mixed_use_lobby_v1",
+      "label": "Shift interior partition (ARCH)",
+      "description": "Move A-WALL-05 east to test cross-discipline adjacency impacts.",
+      "changeEvent": {
+        "type": "MOVE",
+        "elementIds": ["A-WALL-05"],
+        "delta": {"dx": 0.3, "dy": 0.0},
+        "metadata": {"author": "demo", "intent": "layout-refine"}
+      }
+    },
+
+    {
+      "id": "dc_crah_resize",
+      "datasetId": "data_center_pod_v1",
+      "label": "Resize CRAH footprint (MECH)",
+      "description": "Expand D-CRAH-01 envelope to emulate cooling capacity upgrade.",
+      "changeEvent": {
+        "type": "RESIZE",
+        "elementIds": ["D-CRAH-01"],
+        "newBbox": {"x1": 10.0, "y1": 4.7, "x2": 12.4, "y2": 6.8},
+        "metadata": {"author": "demo", "intent": "cooling-upgrade"}
+      }
+    },
+    {
+      "id": "dc_busway_shift",
+      "datasetId": "data_center_pod_v1",
+      "label": "Shift overhead busway (ELEC)",
+      "description": "Move D-BUSWAY-01 upward to evaluate shared connector dependency changes.",
+      "changeEvent": {
+        "type": "MOVE",
+        "elementIds": ["D-BUSWAY-01"],
+        "delta": {"dx": 0.0, "dy": 0.18},
+        "metadata": {"author": "demo", "intent": "power-reroute"}
+      }
+    },
+
+    {
+      "id": "tower_fcu_relocate",
+      "datasetId": "residential_tower_l2_v1",
+      "label": "Relocate apartment FCU (MECH)",
+      "description": "Move T-FCU-01 toward corridor to test proximity and connector impacts.",
+      "changeEvent": {
+        "type": "RELOCATE",
+        "elementIds": ["T-FCU-01"],
+        "delta": {"dx": -0.6, "dy": 0.35},
+        "metadata": {"author": "demo", "intent": "serviceability-improvement"}
+      }
+    },
+    {
+      "id": "tower_core_wall_shift",
+      "datasetId": "residential_tower_l2_v1",
+      "label": "Shift core partition wall (ARCH)",
+      "description": "Move T-WALL-05 east to test corridor MEP clash risk.",
+      "changeEvent": {
+        "type": "MOVE",
+        "elementIds": ["T-WALL-05"],
+        "delta": {"dx": 0.25, "dy": 0.0},
+        "metadata": {"author": "demo", "intent": "core-optimization"}
+      }
+    }
+  ]
+}

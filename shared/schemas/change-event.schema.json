@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structured.ai/schemas/change-event.schema.json",
+  "title": "ChangeEvent",
+  "type": "object",
+  "required": ["type", "elementIds"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["MOVE", "RESIZE", "RELOCATE"]
+    },
+    "elementIds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "delta": {
+      "type": "object",
+      "required": ["dx", "dy"],
+      "properties": {
+        "dx": { "type": "number" },
+        "dy": { "type": "number" }
+      },
+      "additionalProperties": false
+    },
+    "newBbox": {
+      "$ref": "./element.schema.json#/properties/bbox"
+    },
+    "metadata": {
+      "type": "object",
+      "default": {},
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
