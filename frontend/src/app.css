@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #0f172a;
+  background: radial-gradient(circle at top left, #f8fafc 0%, #e2e8f0 45%, #cbd5e1 100%);
+  font-family: 'Avenir Next', 'Helvetica Neue', 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+@layer components {
+  .panel {
+    @apply rounded-xl border border-slate-200/80 bg-white/85 p-5 shadow-panel backdrop-blur;
+  }
+
+  .field-label {
+    @apply mb-2 block text-xs font-semibold uppercase tracking-wide text-slate-600;
+  }
+
+  .field-input {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none ring-offset-2 transition focus:border-sky-500 focus:ring-2 focus:ring-sky-300;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full px-2 py-1 text-xs font-semibold;
+  }
+}
